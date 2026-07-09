@@ -23,9 +23,14 @@ const Leaderboard = () => {
     axios
       .get(`${API}/leaderboard?limit=25`)
       .then((r) => {
-        setRows(r.data || []);
-        setErr(null);
-      })
+    setRows(Array.isArray(r.data) ? r.data : []);
+    setErr(null);
+})
+.catch((err) => {
+    console.error(err);
+    setRows([]);
+    setErr("Failed to fetch leaderboard");
+})
       .catch(() => setErr("Failed to fetch leaderboard"))
       .finally(() => setLoading(false));
   };
@@ -99,7 +104,7 @@ const Leaderboard = () => {
           )}
 
           {!loading &&
-            rows.map((r, i) => {
+            (Array.isArray(rows) ? rows : []).map((r, i) => {
               const tag = OUTCOME_TAG[r.outcome] || OUTCOME_TAG.wrong;
               return (
                 <div
