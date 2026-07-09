@@ -1,0 +1,76 @@
+{
+  "theme": "dark",
+  "archetype": "7 (Electric & Neon)",
+  "design_concept": "Cyberpunk Neon Hacker Terminal (CRT Vibes)",
+  "color_palette": {
+    "background_base": "#050505",
+    "background_surface": "#0a0a0a",
+    "primary": "#FFB000",
+    "primary_hover": "#E69F00",
+    "secondary": "#00F0FF",
+    "secondary_hover": "#00D6E6",
+    "accent_danger": "#FF3366",
+    "accent_success": "#00FF66",
+    "text_primary": "#E0E0E0",
+    "text_secondary": "#A0A0A0",
+    "text_muted": "#555555",
+    "border_default": "rgba(255, 176, 0, 0.2)",
+    "border_active": "rgba(0, 240, 255, 0.5)"
+  },
+  "typography": {
+    "heading_font": "Unbounded, sans-serif",
+    "body_font": "Fira Code, monospace",
+    "scale": {
+      "h1": "text-4xl sm:text-5xl tracking-tighter uppercase",
+      "h2": "text-2xl sm:text-3xl tracking-tight",
+      "h3": "text-xl sm:text-2xl",
+      "body": "text-base tracking-wide",
+      "labels": "text-xs tracking-[0.2em] uppercase"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "p-6 md:p-12",
+    "grid_system": "Asymmetric bento grid for layout. Question area takes 8 cols, sidebars/prize ladder takes 4 cols on desktop.",
+    "borders": "1px solid with glowing drop-shadows on active states. Use brackets [ ] around button text for terminal feel."
+  },
+  "visual_enhancers": {
+    "scanlines": "Overlay using CSS repeating-linear-gradient(0deg, rgba(0,0,0,0.15), rgba(0,0,0,0.15) 1px, transparent 1px, transparent 2px)",
+    "noise_texture": "Use background image with low opacity blend mode to add grain.",
+    "crt_glow": "Text-shadow for primary colors (e.g., text-shadow: 0 0 8px rgba(255, 176, 0, 0.5))",
+    "glassmorphism": "Avoid heavy glass; use dark transparent backgrounds with sharp 1px borders (Retro-Futurism Surface Strategy)."
+  },
+  "components": {
+    "button": "Flat dark background, 1px neon border (cyan or amber), text color matches border. Hover: invert colors or add intense glow. Add data-testid to all.",
+    "prize_ladder": "Styled as a system log or hex dump. Highlight current tier with > indicator and bright color. Passed tiers dimmed.",
+    "lifelines_panel": "Row of 3 buttons. When used, show crossed out / glitch effect (opacity-50 line-through).",
+    "timer": "Linear progress bar at top or neon digital clock, transitions Cyan -> Amber -> Red.",
+    "modals": "Terminal popup style: square corners, hard borders, command-line header (e.g., 'SYSTEM.MILESTONE_REACHED')."
+  },
+  "micro_interactions": {
+    "hover": "Slight lift, border brightness increase, cursor changes to crosshair or terminal block.",
+    "question_reveal": "Text decoding effect (scrambled letters resolving to actual text).",
+    "correct_answer": "Flash neon green, play success sound, brief screen shake/glitch.",
+    "wrong_answer": "Flash neon red, 'SYSTEM FAILURE' glitch overlay."
+  },
+  "image_urls": {
+    "noise_texture": {
+      "url": "https://images.unsplash.com/photo-1602475063211-3d98d60e3b1f",
+      "category": "background",
+      "description": "Dark grain noise texture for base background overlay (opacity 5-10%)"
+    },
+    "glitch_overlay": {
+      "url": "https://images.unsplash.com/photo-1634368998864-8984df61cdda",
+      "category": "effects",
+      "description": "Glitch texture for milestone celebrations or wrong answer overlays (use with mix-blend-mode)"
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use Tailwind CSS for all styling. Configure Unbounded and Fira Code in tailwind.config.js.",
+    "Implement the CRT scanline effect using a pseudo-element overlay covering the entire viewport with pointer-events-none.",
+    "Prize ladder should be left-aligned text looking like code logs (e.g., '0x0C > RS. 1,000,000').",
+    "Ensure all interactive elements have data-testid attributes (e.g., data-testid='option-A-btn').",
+    "Include sound effects via standard HTML5 Audio API for interactions (clicks, timer ticks, correct/wrong).",
+    "Do NOT use Inter or standard sans-serif fonts. Keep the layout asymmetric and highly stylized as a hacker terminal.",
+    "Use standard Shadcn components but heavily customize their classes to remove Vercel-like curves (rounded-none everywhere, solid borders)."
+  ]
+}

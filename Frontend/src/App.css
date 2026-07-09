@@ -1,0 +1,17 @@
+.App {
+  min-height: 100vh;
+  background: #050505;
+  color: #e0e0e0;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background: #050505;
+  color: #e0e0e0;
+  font-family: "Fira Code", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
