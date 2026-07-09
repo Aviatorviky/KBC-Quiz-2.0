@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Trophy, ChevronLeft, RefreshCcw } from "lucide-react";
 import { formatINR } from "../Data/questions";
 
-const API = `${process.env.REACT_APP_BACKEND_URL};
+const API = process.env.REACT_APP_BACKEND_URL;
 
 const OUTCOME_TAG = {
   won: { label: "BREACHED", cls: "text-success border-success/50" },
