@@ -15,7 +15,7 @@ import {
   stopSuspense, toggleMute, isMuted,
 } from "../utils/sounds";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API = `${process.env.REACT_APP_BACKEND_URL};
 
 const computeMilestone = (idx) => {
   if (idx > 8) return 320000;
