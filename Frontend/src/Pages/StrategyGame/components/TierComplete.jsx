@@ -59,17 +59,47 @@ const TierComplete = ({
 
           </div>
 
-          <button
+          <div className="grid grid-cols-2 gap-4">
 
-            onClick={onContinue}
-
-            className="w-full py-4 border border-cyan-neon text-cyan-neon hover:bg-cyan-neon hover:text-black font-display tracking-[0.2em]"
-
-          >
-
-            CONTINUE
-
-          </button>
+            <button
+                onClick={onWalkAway}
+                className="
+                py-4
+                border
+                border-amber-neon
+                text-amber-neon
+                hover:bg-amber-neon
+                hover:text-black
+                transition-all
+                font-display
+                tracking-[0.3em]
+                "
+            >
+            
+            SAFE EXTRACTION
+            
+            </button>
+            
+            <button
+                onClick={onContinue}
+                className="
+                py-4
+                border
+                border-cyan-neon
+                text-cyan-neon
+                hover:bg-cyan-neon
+                hover:text-black
+                transition-all
+                font-display
+                tracking-[0.3em]
+                "
+            >
+            
+            CONTINUE MISSION
+            
+            </button>
+            
+            </div>
 
         </div>
 

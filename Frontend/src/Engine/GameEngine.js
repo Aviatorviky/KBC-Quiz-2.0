@@ -361,8 +361,14 @@ class GameEngine {
 
     walkAway() {
 
+    // Player already cleared the current tier,
+    // so keep the current reward.
+
     this.state.currentPrize =
-        RewardEngine.getWalkAwayPrize(
+        getTier(this.state.currentTier).reward;
+
+    this.state.guaranteedPrize =
+        RewardEngine.getGuaranteedPrize(
             this.state.currentTier
         );
 

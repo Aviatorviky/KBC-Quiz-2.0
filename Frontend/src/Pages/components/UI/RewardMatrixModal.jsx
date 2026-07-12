@@ -34,6 +34,7 @@ const RewardMatrixModal = ({
   currentPrize,
   guaranteedPrize,
   onContinue,
+  onWalkAway,
 }) => {
 
   const [displayPrize, setDisplayPrize] =
@@ -472,45 +473,47 @@ Proceed to the next mission.
 
 <div className="border-t border-white/10 px-6 py-4">
 
-<button
+  <div className="grid grid-cols-2 gap-4">
 
-onClick={onContinue}
+    <button
+      onClick={onWalkAway}
+      className="
+      py-4
+      border
+      border-amber-neon
+      text-amber-neon
+      bg-amber-neon/10
+      hover:bg-amber-neon
+      hover:text-black
+      transition-all
+      duration-300
+      font-display
+      tracking-[0.35em]
+      "
+    >
+      ◀ SAFE EXTRACTION
+    </button>
 
-className="
+    <button
+      onClick={onContinue}
+      className="
+      py-4
+      border
+      border-cyan-neon
+      text-cyan-neon
+      bg-cyan-neon/10
+      hover:bg-cyan-neon
+      hover:text-black
+      transition-all
+      duration-300
+      font-display
+      tracking-[0.35em]
+      "
+    >
+      CONTINUE MISSION ▶
+    </button>
 
-w-full
-
-py-4
-
-font-display
-
-tracking-[0.35em]
-
-text-lg
-
-border
-
-border-cyan-neon
-
-text-cyan-neon
-
-bg-cyan-neon/10
-
-hover:bg-cyan-neon
-
-hover:text-black
-
-transition-all
-
-duration-300
-
-"
-
->
-
-▶ CONTINUE MISSION
-
-</button>
+  </div>
 
 </div>
 
