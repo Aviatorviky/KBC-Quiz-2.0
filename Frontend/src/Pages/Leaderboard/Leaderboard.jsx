@@ -9,7 +9,9 @@ const formatINR = (value) =>
     maximumFractionDigits: 0,
   }).format(value);
 
-const API = process.env.REACT_APP_BACKEND_URL;
+const API =
+  (process.env.REACT_APP_BACKEND_URL ||
+    "https://kbc-quiz-2-0.onrender.com") + "/api";
 
 const OUTCOME_TAG = {
   won: { label: "BREACHED", cls: "text-success border-success/50" },
