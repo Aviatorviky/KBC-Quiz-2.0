@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyber_hard_001",
+    "category": "CyberSecurity",
+    "difficulty": "hard",
+    "question": "Which asymmetric algorithm is commonly used for key exchange?",
+    "options": [
+      "AES",
+      "RSA",
+      "SHA-256",
+      "MD5"
+    ],
+    "correctAnswer": 1,
+    "explanation": "RSA is an asymmetric encryption algorithm."
+  },
+  {
+    "id": "cyber_hard_002",
+    "category": "CyberSecurity",
+    "difficulty": "hard",
+    "question": "What is the primary purpose of a digital signature?",
+    "options": [
+      "To encrypt data",
+      "To verify the authenticity of a message",
+      "To hash data",
+      "To generate random numbers"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A digital signature is used to verify the authenticity and integrity of a message or document."
+  },
+  {
+    "id": "cyber_hard_003",
+    "category": "CyberSecurity",
+    "difficulty": "hard",
+    "question": "Which protocol is commonly used for secure web communication?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "HTTPS",
+      "SMTP"
+    ],
+    "correctAnswer": 2,
+    "explanation": "HTTPS (Hypertext Transfer Protocol Secure) is used for secure web communication."
+  },
+  {
+    "id": "cyber_hard_004",
+    "category": "CyberSecurity",
+    "difficulty": "hard",
+    "question": "What is the purpose of a honeypot in cybersecurity?",
+    "options": [
+      "To attract and trap attackers",
+      "To encrypt sensitive data",
+      "To monitor network traffic",
+      "To block unauthorized access"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A honeypot is a security mechanism set up to attract and trap potential attackers, allowing security professionals to study their methods."
+  },
+  {
+    "id": "cyber_hard_005",
+    "category": "CyberSecurity",
+    "difficulty": "hard",
+    "question": "Which of the following is a common method used in social engineering attacks?",
+    "options": [
+      "Phishing",
+      "Brute force attack",
+      "SQL injection",
+      "Cross-site scripting (XSS)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Phishing is a common method used in social engineering attacks."
+  }
+]

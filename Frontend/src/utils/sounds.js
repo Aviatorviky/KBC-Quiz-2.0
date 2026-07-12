@@ -1,75 +1,105 @@
-// Procedural sound effects using Web Audio API (no audio files needed).
-let ctx = null;
-let muted = false;
-let suspenseInterval = null;
+import hoverSfx from "../assets/sounds/hover.mp3";
+import clickSfx from "../assets/sounds/click.mp3";
+import lockSfx from "../assets/sounds/lock.mp3";
+import correctSfx from "../assets/sounds/correct.mp3";
+import wrongSfx from "../assets/sounds/wrong.mp3";
+import timerSfx from "../assets/sounds/timer.mp3";
+import winSfx from "../assets/sounds/win.mp3";
+import loseSfx from "../assets/sounds/lose.mp3";
+import tierSfx from "../assets/sounds/tier.mp3";
 
-const initAudio = () => {
-  if (!ctx) {
-    ctx = new (window.AudioContext || window.webkitAudioContext)();
-  }
+let muted = localStorage.getItem("kbc_muted") === "true";
+
+const create = (src, volume = 1) => {
+  const audio = new Audio(src);
+  audio.volume = volume;
+  audio.preload = "auto";
+  return audio;
+};
+
+const sounds = {
+  hover: create(hoverSfx, 0.30),
+  click: create(clickSfx, 0.45),
+  lock: create(lockSfx, 0.60),
+  correct: create(correctSfx, 0.70),
+  wrong: create(wrongSfx, 0.70),
+  timer: create(timerSfx, 0.45),
+  win: create(winSfx, 0.90),
+  lose: create(loseSfx, 0.90),
+  tier: create(tierSfx, 0.80),
+};
+
+function play(sound) {
+  if (muted) return;
+
+  const audio = sounds[sound];
+
+  if (!audio) return;
+
+  audio.pause();
+  audio.currentTime = 0;
+
+  audio.play().catch(() => {});
+}
+
+// =========================
+// NORMAL SOUNDS
+// =========================
+
+export const playHover = () => play("hover");
+
+export const playClick = () => play("click");
+
+export const playLock = () => play("lock");
+
+export const playCorrect = () => play("correct");
+
+export const playWrong = () => play("wrong");
+
+export const playWin = () => play("win");
+
+export const playLose = () => play("lose");
+
+export const playTier = () => play("tier");
+
+// =========================
+// TIMER
+// =========================
+
+export const playTick = () => {
+
+  if (muted) return;
+
+  const audio = sounds.timer;
+
+  audio.pause();
+  audio.currentTime = 0;
+
+  audio.play().catch(() => {});
+
+};
+
+export const stopTimer = () => {
+
+  const audio = sounds.timer;
+
+  audio.pause();
+  audio.currentTime = 0;
+
+};
+
+// =========================
+// MUTE
+// =========================
+
+export const toggleMute = () => {
+
+  muted = !muted;
+
+  localStorage.setItem("kbc_muted", muted);
+
+  return muted;
+
 };
 
 export const isMuted = () => muted;
-
-export const toggleMute = () => {
-  muted = !muted;
-  if (muted) stopSuspense();
-  return muted;
-};
-
-const playTone = (freq, type, duration, gainStart = 0.1) => {
-  if (muted) return;
-  initAudio();
-  try {
-    const osc = ctx.createOscillator();
-    const gainNode = ctx.createGain();
-    
-    osc.type = type;
-    osc.frequency.setValueAtTime(freq, ctx.currentTime);
-    
-    gainNode.gain.setValueAtTime(gainStart, ctx.currentTime);
-    gainNode.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + duration);
-    
-    osc.connect(gainNode);
-    gainNode.connect(ctx.destination);
-    
-    osc.start();
-    osc.stop(ctx.currentTime + duration);
-  } catch (e) {
-    console.error(e);
-  }
-};
-
-export const playClick = () => playTone(800, "sine", 0.08, 0.05);
-export const playHover = () => playTone(600, "sine", 0.04, 0.02);
-export const playCorrect = () => {
-  playTone(523.25, "sine", 0.15, 0.1); // C5
-  setTimeout(() => playTone(659.25, "sine", 0.3, 0.1), 150); // E5
-};
-export const playWrong = () => {
-  playTone(180, "sawtooth", 0.4, 0.15);
-  setTimeout(() => playTone(130, "sawtooth", 0.5, 0.15), 100);
-};
-export const playMilestone = () => {
-  playTone(523.25, "triangle", 0.2, 0.1);
-  setTimeout(() => playTone(659.25, "triangle", 0.2, 0.1), 150);
-  setTimeout(() => playTone(783.99, "triangle", 0.4, 0.15), 300);
-};
-export const playLifeline = () => playTone(440, "triangle", 0.2, 0.08);
-export const playTick = () => playTone(1200, "sine", 0.03, 0.05);
-export const playGameover = () => playTone(90, "sawtooth", 0.8, 0.2);
-
-export const startSuspense = () => {
-  if (muted || suspenseInterval) return;
-  initAudio();
-  suspenseInterval = setInterval(() => {
-    playTone(110, "triangle", 0.4, 0.05);
-  }, 1200);
-};
-
-export const stopSuspense = () => {
-  if (suspenseInterval) {
-    clearInterval(suspenseInterval);
-    suspenseInterval = null;
-  }
-};

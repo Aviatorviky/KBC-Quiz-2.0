@@ -1,0 +1,42 @@
+export const TIERS = [
+  {
+    id: 1,
+    name: "Recon",
+    difficulty: "easy",
+    questions: 1,
+    prize: 5000,
+    guaranteed: 5000,
+  },
+  {
+    id: 2,
+    name: "Breach",
+    difficulty: "easy",
+    questions: 1,
+    prize: 25000,
+    guaranteed: 25000,
+  },
+  {
+    id: 3,
+    name: "Exploit",
+    difficulty: "medium",
+    questions: 1,
+    prize: 200000,
+    guaranteed: 200000,
+  },
+  {
+    id: 4,
+    name: "Root Access",
+    difficulty: "hard",
+    questions: 1,
+    prize: 2000000,
+    guaranteed: 200000,
+  },
+  {
+    id: 5,
+    name: "Mainframe",
+    difficulty: "expert",
+    questions: 1,
+    prize: 10000000,
+    guaranteed: 2000000,
+  },
+];

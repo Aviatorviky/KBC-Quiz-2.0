@@ -1,0 +1,32 @@
+[
+  {
+    "id": "Sports",
+    "name": "Sports",
+    "icon": "⚽"
+  },
+  {
+    "id": "Movies",
+    "name": "Movies",
+    "icon": "🎬"
+  },
+  {
+    "id": "History",
+    "name": "History",
+    "icon": "📜"
+  },
+  {
+    "id": "Maths",
+    "name": "Mathematics",
+    "icon": "🧮"
+  },
+  {
+    "id": "Science",
+    "name": "Science",
+    "icon": "🔬"
+  },
+  {
+    "id": "CyberSecurity",
+    "name": "Cyber Security",
+    "icon": "🛡️"
+  }
+]

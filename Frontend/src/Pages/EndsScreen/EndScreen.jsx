@@ -1,29 +1,39 @@
 import { useEffect, useState } from "react";
 import { Trophy, SkullIcon, LogOut, TimerOff, RotateCcw, ChevronRight } from "lucide-react";
-import { formatINR } from "../Data/questions";
+import {playWin,playLose} from "../../utils/sounds";
+
+const formatINR = (value) =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(value);
 
 const OUTCOME_MAP = {
   won: {
-    label: "MAINFRAME_BREACHED",
-    subtitle: "You cracked all 12 layers. Legend status: UNLOCKED.",
+    label: "MISSION COMPLETE",
+    subtitle: "You successfully breached all security layers.",
     color: "success",
     Icon: Trophy,
   },
+
   wrong: {
-    label: "SESSION_TERMINATED",
-    subtitle: "Wrong answer. You fall back to the last safe milestone.",
+    label: "MISSION FAILED",
+    subtitle: "Wrong answer. You returned to the last secure checkpoint.",
     color: "danger",
     Icon: SkullIcon,
   },
+
   walked_away: {
-    label: "SAFE_EXTRACTION",
-    subtitle: "You walked away with the payload. Smart move, operator.",
+    label: "SAFE EXTRACTION",
+    subtitle: "You secured your winnings and exited safely.",
     color: "amber",
     Icon: LogOut,
   },
+
   timeout: {
-    label: "CONNECTION_DROPPED",
-    subtitle: "Timer expired. The system locked you out mid-query.",
+    label: "SYSTEM TIMEOUT",
+    subtitle: "Time expired before an answer could be verified.",
     color: "danger",
     Icon: TimerOff,
   },
@@ -56,6 +66,18 @@ const EndScreen = ({ outcome, prize, questionsAnswered, playerName, onRestart, o
   const [displayPrize, setDisplayPrize] = useState(0);
 
   useEffect(() => {
+
+    if(outcome==="won"){
+
+        playWin();
+
+    }
+
+    else{
+
+        playLose();
+
+    }
     if (prize === 0) return;
     let cur = 0;
     const step = Math.max(1, Math.floor(prize / 40));
@@ -73,7 +95,7 @@ const EndScreen = ({ outcome, prize, questionsAnswered, playerName, onRestart, o
   const { Icon } = cfg;
 
   return (
-    <div className="crt-scanlines min-h-screen w-full flex items-center justify-center px-4">
+    <div className="crt-scanlines animate-page min-h-screen w-full flex items-center justify-center px-4">
       <div className="max-w-3xl w-full">
         <div className={`term-panel ${c.border} ${c.shadow} p-8 md:p-12`} data-testid="end-screen">
           <div className="flex items-center justify-between mb-8">
@@ -89,6 +111,18 @@ const EndScreen = ({ outcome, prize, questionsAnswered, playerName, onRestart, o
             <div className={`p-3 border ${c.border} mb-6`} style={{ borderRadius: 2 }}>
               <Icon size={28} strokeWidth={1.5} className={c.text} />
             </div>
+
+          <div className="mb-3 px-4 py-2 border border-white/10 bg-white/5 inline-flex items-center gap-2 rounded-sm">
+
+              <span className={`w-2 h-2 rounded-full ${c.accent}`} />
+
+              <span className="text-[10px] tracking-[0.35em] uppercase text-white/60">
+
+                Mission Status
+
+              </span>
+
+          </div>
 
             <h1
               className={`font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tighter leading-none mb-3 ${c.text} animate-glitch`}
@@ -117,7 +151,7 @@ const EndScreen = ({ outcome, prize, questionsAnswered, playerName, onRestart, o
                   breach_depth
                 </div>
                 <div className="font-display font-bold text-2xl text-cyan-neon glow-cyan tabular-nums">
-                  {String(questionsAnswered).padStart(2, "0")}/12
+                  {String(questionsAnswered).padStart(2, "0")}/36
                 </div>
               </div>
             </div>

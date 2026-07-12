@@ -1,0 +1,76 @@
+[
+  {
+    "id": "science_expert_001",
+    "category": "Science",
+    "difficulty": "expert",
+    "question": "What is the Heisenberg Uncertainty Principle?",
+    "options": [
+        "It states that the position and momentum of a particle cannot both be precisely determined at the same time.",
+        "It states that energy cannot be created or destroyed.",
+        "It states that every action has an equal and opposite reaction.",
+        "It states that light behaves both as a particle and a wave."
+        ],
+    "correctAnswer": 0,
+    "explanation": "The Heisenberg Uncertainty Principle is a fundamental concept in quantum mechanics that states that the position and momentum of a particle cannot both be precisely determined at the same time."
+  },
+
+  {
+    "id": "science_expert_002",
+    "category": "Science",
+    "difficulty": "expert",
+    "question": "What is the second law of thermodynamics?",
+    "options": [
+      "It states that energy cannot be created or destroyed.",
+      "It states that every action has an equal and opposite reaction.",
+      "It states that the total entropy of an isolated system can never decrease over time.",
+        "It states that light behaves both as a particle and a wave."
+        ],
+    "correctAnswer": 2,
+    "explanation": "The second law of thermodynamics states that the total entropy of an isolated system can never decrease over time, and is often associated with the concept of irreversibility in natural processes."
+  },
+
+  {
+    "id": "science_expert_003",
+    "category": "Science",
+    "difficulty": "expert",
+    "question": "What is the theory of relativity?",
+    "options": [
+      "It is a theory that explains the behavior of subatomic particles.",
+      "It is a theory that describes the behavior of light.",
+      "It is a theory that explains the origin of the universe.",
+      "It is a theory proposed by Albert Einstein that describes the relationship between space, time, and gravity."
+        ],
+    "correctAnswer": 3,
+    "explanation": "The theory of relativity, proposed by Albert Einstein, describes the relationship between space, time, and gravity. It consists of two parts: special relativity and general relativity."
+  },
+
+  {
+    "id": "science_expert_004",
+    "category": "Science",
+    "difficulty": "expert",
+    "question": "What is the difference between classical mechanics and quantum mechanics?",
+    "options": [
+        "Classical mechanics describes the motion of macroscopic objects, while quantum mechanics describes the behavior of subatomic particles.",
+        "Classical mechanics describes the behavior of light, while quantum mechanics describes the behavior of sound.",
+        "Classical mechanics describes the behavior of fluids, while quantum mechanics describes the behavior of solids.",
+        "Classical mechanics describes the behavior of gases, while quantum mechanics describes the behavior of liquids."
+        ],
+    "correctAnswer": 0,
+    "explanation": "Classical mechanics is a branch of physics that deals with the motion of macroscopic objects, while quantum mechanics is a branch of physics that deals with the behavior of subatomic particles. The two theories are based on different principles and have different mathematical formulations."
+  },
+
+  {
+    "id": "science_expert_005",
+    "category": "Science",
+    "difficulty": "expert",
+    "question": "What is the difference between a black hole and a neutron star?",
+    "options": [
+      "A black hole is an object with a gravitational pull so strong that nothing can escape it, while a neutron star is a type of white dwarf.",
+      "A black hole is an object with a gravitational pull so strong that nothing can escape it, while a neutron star is a dense remnant of a supernova explosion.",
+        "A black hole is an object with a gravitational pull so strong that nothing can escape it, while a neutron star is a type of red giant.",
+        "A black hole is an object with a gravitational pull so strong that nothing can escape it, while a neutron star is a type of main sequence star."
+        ],
+    "correctAnswer": 1,
+    "explanation": "A black hole is an object with a gravitational pull so strong that nothing, not even light, can escape it. A neutron star, on the other hand, is the dense remnant of a supernova explosion, composed mostly of neutrons and having an extremely high density."
+  }
+]

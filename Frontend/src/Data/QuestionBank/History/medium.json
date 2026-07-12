@@ -1,0 +1,73 @@
+[
+  {
+    "id": "history_medium_001",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "In which year did the Indian Independence Act come into effect?",
+    "options": [
+      "1948",
+      "1947",
+      "1950",
+      "1952"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The Indian Independence Act came into effect in 1947."
+  },
+  {
+    "id": "history_medium_002",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "Who was the first President of India?",
+    "options": [
+      "Rajendra Prasad",
+      "Zakir Husain",
+      "Sarvepalli Radhakrishnan",
+      "V. V. Giri"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Dr. Rajendra Prasad served as the first President of India from 1950 to 1962."
+  },
+  {
+    "id": "history_medium_003",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "Which Indian leader is known as the 'Father of the Nation'?",
+    "options": [
+      "Mahatma Gandhi",
+      "Jawaharlal Nehru",
+      "Subhas Chandra Bose",
+      "Sardar Vallabhbhai Patel"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Mahatma Gandhi is widely regarded as the 'Father of the Nation' for his role in India's struggle for independence."
+  },
+  {
+    "id": "history_medium_004",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "Which Indian state was the first to be formed on a linguistic basis?",
+    "options": [
+      "Maharashtra",
+      "Karnataka",
+      "Tamil Nadu",
+      "Andhra Pradesh"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Andhra Pradesh was the first Indian state to be formed on a linguistic basis in 1953."
+  },
+  {
+    "id": "history_medium_005",
+    "category": "History",
+    "difficulty": "medium",
+    "question": "Who was the first Prime Minister of India?",
+    "options": [
+      "Mahatma Gandhi",
+      "Sardar Patel",
+      "Jawaharlal Nehru",
+      "Rajendra Prasad"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Jawaharlal Nehru became India's first Prime Minister in 1947."
+  }
+]
+    

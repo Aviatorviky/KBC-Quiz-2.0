@@ -1,0 +1,45 @@
+[
+  {
+    "id": "Sports",
+    "name": "Sports",
+    "icon": "⚽",
+    "color": "#00BFFF"
+  },
+  {
+    "id": "CyberSecurity",
+    "name": "Cyber Security",
+    "icon": "🛡️",
+    "color": "#00FF99"
+  },
+  {
+
+    "id":"history",
+
+    "name":"History",
+
+    "icon":"📜",
+
+    "color": "#00FF99"
+
+  },
+  {
+  "id":"science",
+  
+  "name":"Science",
+  
+  "icon":"🔬",
+
+  "color":"#00BFFF"
+  },
+  
+  {
+  "id":"maths",
+  
+  "name":"Maths",
+  
+  "icon":"🧮",
+
+  "color":"#00BFFF"
+    }
+
+]

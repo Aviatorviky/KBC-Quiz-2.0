@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sports_medium_001",
+    "category": "Sports",
+    "difficulty": "medium",
+    "question": "Which tennis player has won the most Grand Slam titles in history?",
+    "options": [
+      "Roger Federer",
+      "Rafael Nadal",
+      "Novak Djokovic",
+      "Serena Williams"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Rafael Nadal has won the most Grand Slam titles in history, with a total of 22 titles as of 2022."
+  },
+  {
+    "id": "sports_medium_002",
+    "category": "Sports",
+    "difficulty": "medium",
+    "question": "Which country has won the most FIFA World Cup titles?",
+    "options": [
+      "Germany",
+      "Italy",
+      "Brazil",
+      "Argentina"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Brazil has won the most FIFA World Cup titles, with a total of 5 championships."
+  },
+  {
+    "id": "sports_medium_003",
+    "category": "Sports",
+    "difficulty": "medium",
+    "question": "Which athlete holds the record for the most Olympic gold medals in swimming?",
+    "options": [
+      "Mark Spitz",
+      "Ryan Lochte",
+      "Ian Thorpe",
+      "Michael Phelps"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Michael Phelps holds the record for the most Olympic gold medals in swimming, with a total of 23 gold medals."
+  },
+  {
+    "id": "sports_medium_004",
+    "category": "Sports",
+    "difficulty": "medium",
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+      "China",
+      "Brazil",
+      "United Kingdom",
+      "Russia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The 2016 Summer Olympics were hosted by Brazil in the city of Rio de Janeiro."
+  },
+  {
+    "id": "sports_medium_005",
+    "category": "Sports",
+    "difficulty": "medium",
+    "question": "Which football club has won the most UEFA Champions League titles?",
+    "options": [
+      "Real Madrid",
+      "Barcelona",
+      "AC Milan",
+      "Liverpool"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Real Madrid has won the most UEFA Champions League titles, with a total of 13 championships."
+  }
+]

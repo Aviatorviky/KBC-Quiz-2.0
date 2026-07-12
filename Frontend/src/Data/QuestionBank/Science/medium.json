@@ -1,0 +1,76 @@
+[
+  {
+    "id": "science_medium_001",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Ag",
+      "Fe",
+      "Pb",
+      "Au"
+    ], 
+    "correctAnswer": 3,
+    "explanation": "The chemical symbol for gold is Au, which comes from the Latin word 'Aurum'."
+  },
+
+  {
+    "id": "science_medium_002",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the speed of light in a vacuum?",
+    "options": [
+      "299,792,458 m/s",
+      "150,000,000 m/s",
+      "1,080,000,000 m/s",
+      "3,000,000 m/s"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s)."
+  },
+
+  {
+    "id": "science_medium_003",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the powerhouse of the cell?",
+    "options": [
+      "Nucleus",
+      "Ribosome",
+      "Mitochondria",
+      "Endoplasmic Reticulum"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The mitochondria are known as the powerhouse of the cell because they generate most of the cell's supply of adenosine triphosphate (ATP), which is used as a source of chemical energy."
+  },
+
+  {
+    "id": "science_medium_004",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "KCl",
+      "NaCl",
+      "CaCO3",
+      "H2O"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The chemical formula for table salt is NaCl, which stands for sodium chloride."
+  },
+
+  {
+    "id": "science_medium_005",
+    "category": "Science",
+    "difficulty": "medium",
+    "question": "What is the boiling point of water at sea level?",
+    "options": [
+      "100°C",
+      "0°C",
+      "50°C",
+      "212°F"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The boiling point of water at sea level is 100 degrees Celsius (°C) or 212 degrees Fahrenheit (°F)."
+  }
+]

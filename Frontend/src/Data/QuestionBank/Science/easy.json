@@ -1,0 +1,80 @@
+[
+  {
+    "id": "science_easy_001",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What is the chemical symbol for water?",
+    "options": [
+      "H2O",
+      "O2",
+      "CO2",
+      "NaCl"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The chemical symbol for water is H2O, which represents two hydrogen atoms bonded to one oxygen atom."
+  },
+
+
+  {
+    "id": "science_easy_002",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What planet is known as the Red Planet?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Saturn"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Mars is often called the 'Red Planet' because of its reddish appearance, which is due to iron oxide (rust) on its surface."
+  },
+
+
+  {
+    "id": "science_easy_003",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What gas do plants absorb from the atmosphere for photosynthesis?",
+    "options": [
+      "Carbon Dioxide (CO2)",
+      "Oxygen (O2)",
+      "Nitrogen (N2)",
+      "Hydrogen (H2)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Plants absorb carbon dioxide (CO2) from the atmosphere during photosynthesis to produce glucose and oxygen."
+  },
+
+
+  {
+    "id": "science_easy_004",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What is the boiling point of water at sea level?",
+    "options": [
+      "100°C",
+      "0°C",
+      "50°C",
+      "212°F"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The boiling point of water at sea level is 100 degrees Celsius (212 degrees Fahrenheit)."
+  },
+
+  
+  {
+    "id": "science_easy_005",
+    "category": "Science",
+    "difficulty": "easy",
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Skin",
+      "Liver",
+      "Heart",
+      "Lungs"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The skin is the largest organ in the human body, serving as a protective barrier and regulating temperature."
+  }
+]

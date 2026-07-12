@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sports_expert_001",
+    "category": "Sports",
+    "difficulty": "expert",
+    "question": "Which country has won the most Olympic gold medals in history?",
+    "options": [
+        "United States",
+        "Soviet Union",
+        "China",
+        "Germany"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The United States has won the most Olympic gold medals in history, with a total of 1,127 gold medals as of the 2020 Tokyo Olympics."
+    },
+  {
+    "id": "sports_expert_002",
+    "category": "Sports",
+    "difficulty": "expert",
+    "question": "Which athlete has won the most Olympic gold medals?",
+    "options": [
+        "Usain Bolt",
+        "Michael Phelps",
+        "Larisa Latynina",
+        "Mark Spitz"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Michael Phelps has won the most Olympic gold medals, with a total of 23 gold medals."
+  },
+  {
+    "id": "sports_expert_003",
+    "category": "Sports",
+    "difficulty": "expert",
+    "question": "Which country has won the most FIFA World Cup titles?",
+    "options": [
+        "Germany",
+        "Italy",
+        "Brazil",
+        "Argentina"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Brazil has won the most FIFA World Cup titles, with a total of 5 championships."
+  },
+  {
+    "id": "sports_expert_004",
+    "category": "Sports",
+    "difficulty": "expert",
+    "question": "Which tennis player has won the most Grand Slam titles in history?",
+    "options": [
+        "Roger Federer",
+        "Novak Djokovic",
+        "Serena Williams",
+        "Rafael Nadal"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Rafael Nadal has won the most Grand Slam titles in history, with a total of 22 titles as of 2022."
+  },
+  {
+    "id": "sports_expert_005",
+    "category": "Sports",
+    "difficulty": "expert",
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+        "Brazil",
+        "China",
+        "United Kingdom",
+        "Russia"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The 2016 Summer Olympics were hosted by Brazil in the city of Rio de Janeiro."
+  }
+]

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyber_expert_001",
+    "category": "CyberSecurity",
+    "difficulty": "expert",
+    "question": "What is the primary purpose of a firewall in network security?",
+    "options": [
+      "To encrypt data",
+      "To monitor network traffic",
+      "To block unauthorized access",
+      "To manage user accounts"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A firewall is primarily used to block unauthorized access to a network while allowing legitimate communication." 
+  },
+  {
+    "id": "cyber_expert_002",
+    "category": "CyberSecurity",
+    "difficulty": "expert",
+    "question": "Which of the following is a common type of cyber attack that involves tricking users into revealing sensitive information?",
+    "options": [
+      "Phishing",
+      "DDoS attack",
+      "SQL injection",
+      "Man-in-the-middle attack"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Phishing is a common type of cyber attack that involves tricking users into revealing sensitive information."
+  },
+  {
+    "id": "cyber_expert_003",
+    "category": "CyberSecurity",
+    "difficulty": "expert",
+    "question": "What is the purpose of a VPN (Virtual Private Network)?",
+    "options": [
+      "To provide secure remote access to a network",
+      "To block malware",
+      "To monitor network traffic",
+      "To encrypt email communications"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A VPN provides secure remote access to a network by encrypting the connection between the user and the network."
+  },
+  {
+    "id": "cyber_expert_004",
+    "category": "CyberSecurity",
+    "difficulty": "expert",
+    "question": "Which of the following is a widely used symmetric encryption algorithm?",
+    "options": [
+      "RSA",
+      "AES",
+      "SHA-256",
+      "Diffie-Hellman"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm."
+  },
+  {
+    "id": "cyber_expert_005",
+    "category": "CyberSecurity",
+    "difficulty": "expert",
+    "question": "What is the primary purpose of multi-factor authentication (MFA)?",
+    "options": [
+      "To encrypt data during transmission",
+      "To provide an additional layer of security by requiring multiple forms of verification",
+      "To monitor network traffic for suspicious activity",
+      "To block unauthorized access to a network"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Multi-factor authentication (MFA) provides an additional layer of security by requiring users to provide multiple forms of verification before gaining access."
+  }
+]

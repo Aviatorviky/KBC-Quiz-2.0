@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyber_easy_001",
+    "category": "CyberSecurity",
+    "difficulty": "easy",
+    "question": "What does SSL stand for?",
+    "options": [
+      "Serial Sockets Layer",
+      "Secure Socket Library",
+      "Serial Socket Library",
+      "Secure Sockets Layer"
+    ],
+    "correctAnswer": 3,
+    "explanation": "SSL stands for Secure Sockets Layer."
+  },
+  {
+    "id": "cyber_easy_002",
+    "category": "CyberSecurity",
+    "difficulty": "easy",
+    "question": "What is the primary purpose of a firewall?",
+    "options": [
+      "To encrypt data",
+      "To block unauthorized access",
+      "To store passwords",
+      "To monitor network traffic"
+    ],
+    "correctAnswer": 1,
+    "explanation": "A firewall is used to block unauthorized access to or from a private network."
+  },
+  {
+    "id": "cyber_easy_003",
+    "category": "CyberSecurity",
+    "difficulty": "easy",
+    "question": "Which of the following is a common type of malware?",
+    "options": [
+      "Trojan horse",
+      "Firewall",
+      "VPN",
+      "SSL"
+    ],
+    "correctAnswer": 0,
+    "explanation": "A Trojan horse is a type of malware that disguises itself as legitimate software."
+  },
+  {
+    "id": "cyber_easy_004",
+    "category": "CyberSecurity",
+    "difficulty": "easy",
+    "question": "What is phishing?",
+    "options": [
+      "A type of firewall",
+      "A method of fishing in the ocean",
+      "A technique used to steal sensitive information",
+      "A secure communication protocol"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Phishing is a technique used by cybercriminals to trick individuals into providing sensitive information."
+  },
+  {
+    "id": "cyber_easy_005",
+    "category": "CyberSecurity",
+    "difficulty": "easy",
+    "question": "What does VPN stand for?",
+    "options": [
+      "Virtual Private Network",
+      "Very Private Network",
+      "Virtual Public Network",
+      "Very Public Network"
+    ],
+    "correctAnswer": 0,
+    "explanation": "VPN stands for Virtual Private Network, which allows for secure connections over the internet."
+  }
+]

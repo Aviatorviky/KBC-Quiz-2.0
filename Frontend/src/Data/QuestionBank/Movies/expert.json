@@ -1,0 +1,72 @@
+[
+  {
+    "id": "movies_expert_001",
+    "category": "Movies",
+    "difficulty": "expert",
+    "question": "Which director is known for the 'Three Colors' trilogy?",
+    "options": [
+        "Ingmar Bergman",
+        "Federico Fellini",
+        "Krzysztof Kieślowski",
+        "Jean-Luc Godard"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Krzysztof Kieślowski is known for the 'Three Colors' trilogy (Blue, White, Red)."
+    },
+  {
+    "id": "movies_expert_002",
+    "category": "Movies",
+    "difficulty": "expert",
+    "question": "What is the name of the fictional character played by Tom Hanks in the movie 'Forrest Gump'?",
+    "options": [
+      "John Doe",
+      "Forrest Gump",
+      "Bubba Blue",
+      "Lieutenant Dan"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Tom Hanks played the character Forrest Gump in the movie of the same name."
+  },
+  {
+    "id": "movies_expert_003",
+    "category": "Movies",
+    "difficulty": "expert",
+    "question": "Which movie features the character 'Darth Vader'?",
+    "options": [
+      "The Lord of the Rings",
+      "Harry Potter",
+      "The Matrix",
+      "Star Wars"
+    ],
+    "correctAnswer": 3,
+    "explanation": "'Darth Vader' is a character from the 'Star Wars' movie franchise."
+  },
+  {
+    "id": "movies_expert_004",
+    "category": "Movies",
+    "difficulty": "expert",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Christopher Nolan",
+      "Steven Spielberg",
+      "James Cameron",
+      "Quentin Tarantino"
+    ],
+    "correctAnswer": 0,
+    "explanation": "'Inception' was directed by Christopher Nolan."
+  },
+  {
+    "id": "movies_expert_005",
+    "category": "Movies",
+    "difficulty": "expert",
+    "question": "Which movie is known for the quote 'I'll be back'?",
+    "options": [
+      "Die Hard",
+      "The Terminator",
+      "Predator",
+      "Total Recall"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'I'll be back' is a famous quote from the movie 'The Terminator', spoken by Arnold Schwarzenegger."
+  }
+]

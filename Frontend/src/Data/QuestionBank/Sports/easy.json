@@ -1,0 +1,72 @@
+[
+  {
+    "id": "sports_easy_001",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "Who won the FIFA World Cup 2022?",
+    "options": [
+      "Brazil",
+      "Argentina",
+      "France",
+      "Germany"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Argentina defeated France in the final."
+  },
+  {
+    "id": "sports_easy_002",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "How many players are on a football team?",
+    "options": [
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "correctAnswer": 2,
+    "explanation": "A football team has 11 players."
+  },
+  {
+    "id": "sports_easy_003",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "Which country hosted the 2016 Summer Olympics?",
+    "options": [
+      "China",
+      "Brazil",
+      "United Kingdom",
+      "Russia"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The 2016 Summer Olympics were hosted by Brazil in the city of Rio de Janeiro."
+  },
+  {
+    "id": "sports_easy_004",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "Which athlete holds the record for the most Olympic gold medals in swimming?",
+    "options": [
+      "Mark Spitz",
+      "Ryan Lochte",
+      "Ian Thorpe",
+      "Michael Phelps"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Michael Phelps holds the record for the most Olympic gold medals in swimming, with a total of 23 gold medals."
+  },
+  {
+    "id": "sports_easy_005",
+    "category": "Sports",
+    "difficulty": "easy",
+    "question": "Which country has won the most FIFA World Cup titles?",
+    "options": [
+      "Germany",
+      "Italy",
+      "Brazil",
+      "Argentina"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Brazil has won the most FIFA World Cup titles, with a total of 5 championships."
+  }
+]

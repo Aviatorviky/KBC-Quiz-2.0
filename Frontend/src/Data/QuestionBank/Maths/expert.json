@@ -1,0 +1,72 @@
+[
+  {
+    "id": "maths_expert_001",
+    "category": "Maths",
+    "difficulty": "expert",
+    "question": "What is the value of the Riemann zeta function at s = 2?",
+    "options": [
+      "π²/6",
+      "1",
+      "0",
+      "∞"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Riemann zeta function at s = 2 is equal to π²/6."
+    },
+  {
+    "id": "maths_expert_002",
+    "category": "Maths",
+    "difficulty": "expert",
+    "question": "What is the value of the Riemann zeta function at s = 4?",
+    "options": [
+      "π⁴/90",
+      "1",
+      "0",
+      "∞"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Riemann zeta function at s = 4 is equal to π⁴/90."
+  },
+  {
+    "id": "maths_expert_003",
+    "category": "Maths",
+    "difficulty": "expert",
+    "question": "What is the value of the Riemann zeta function at s = 6?",
+    "options": [
+      "π⁶/945",
+      "1",
+      "0",
+      "∞"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Riemann zeta function at s = 6 is equal to π⁶/945."
+  },
+  {
+    "id": "maths_expert_004",
+    "category": "Maths",
+    "difficulty": "expert",
+    "question": "What is the value of the Riemann zeta function at s = 8?",
+    "options": [
+      "π⁸/9450",
+      "1",
+      "0",
+      "∞"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Riemann zeta function at s = 8 is equal to π⁸/9450."
+  },
+  {
+    "id": "maths_expert_005",
+    "category": "Maths",
+    "difficulty": "expert",
+    "question": "What is the value of the Riemann zeta function at s = 10?",
+    "options": [
+      "π¹⁰/93555",
+      "1",
+      "0",
+      "∞"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Riemann zeta function at s = 10 is equal to π¹⁰/93555."
+  }
+]

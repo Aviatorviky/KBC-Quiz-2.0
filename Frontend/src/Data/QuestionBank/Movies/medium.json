@@ -1,0 +1,72 @@
+[
+  {
+    "id": "movies_medium_001",
+    "category": "Movies",
+    "difficulty": "medium",
+    "question": "Which movie features the character 'Forrest Gump'?",
+    "options": [
+        "The Green Mile",
+        "Cast Away",
+        "Saving Private Ryan",
+        "Forrest Gump"
+    ],
+    "correctAnswer": 3,
+    "explanation": "'Forrest Gump' is the movie that features the character 'Forrest Gump'."
+  },
+  {
+    "id": "movies_medium_002",
+    "category": "Movies",
+    "difficulty": "medium",
+    "question": "Who directed the movie 'Pulp Fiction'?",
+    "options": [
+        "Quentin Tarantino",
+        "Martin Scorsese",
+        "Steven Spielberg",
+        "Christopher Nolan"
+    ],
+    "correctAnswer": 0,
+    "explanation": "'Pulp Fiction' was directed by Quentin Tarantino."
+  },
+  {
+    "id": "movies_medium_003",
+    "category": "Movies",
+    "difficulty": "medium",
+    "question": "Which movie won the Academy Award for Best Picture in 1994?",
+    "options": [
+        "Pulp Fiction",
+        "The Shawshank Redemption",
+        "Forrest Gump",
+        "Four Weddings and a Funeral"
+    ],
+    "correctAnswer": 2,
+    "explanation": "'Forrest Gump' won the Academy Award for Best Picture in 1994."
+  },
+  {
+    "id": "movies_medium_004",
+    "category": "Movies",
+    "difficulty": "medium",
+    "question": "Which actor played the character of 'Tyler Durden' in the movie 'Fight Club'?",
+    "options": [
+        "Brad Pitt",
+        "Edward Norton",
+        "Helena Bonham Carter",
+        "Jared Leto"
+    ],
+    "correctAnswer": 0,
+    "explanation": "'Brad Pitt' played the character of 'Tyler Durden' in the movie 'Fight Club'."
+  },
+  {
+    "id": "movies_medium_005",
+    "category": "Movies",
+    "difficulty": "medium",
+    "question": "Which movie features the character 'Darth Vader'?",
+    "options": [
+        "The Lord of the Rings",
+        "Harry Potter",
+        "The Matrix",
+        "Star Wars"
+    ],
+    "correctAnswer": 3,
+    "explanation": "'Darth Vader' is a character from the 'Star Wars' movie franchise."
+  }
+]

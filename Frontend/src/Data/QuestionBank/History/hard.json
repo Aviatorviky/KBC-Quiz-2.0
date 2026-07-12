@@ -1,0 +1,72 @@
+[
+  {
+    "id": "history_hard_001",
+    "category": "History",
+    "difficulty": "hard",
+    "question": "Which treaty ended the World War I?",
+    "options": [
+      "Treaty of Versailles",
+      "Treaty of Paris",
+      "Treaty of Ghent",
+      "Treaty of Brest-Litovsk"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The Treaty of Versailles ended World War I."
+  },
+  {
+    "id": "history_hard_002",
+    "category": "History",
+    "difficulty": "hard",
+    "question": "Who was the first President of the United States?",
+    "options": [
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "George Washington",
+      "John Adams"
+    ],
+    "correctAnswer": 2,
+    "explanation": "George Washington was the first President of the United States."
+  },
+  {
+    "id": "history_hard_003",
+    "category": "History",
+    "difficulty": "hard",
+    "question": "Which empire was ruled by Genghis Khan?",
+    "options": [
+      "Ottoman Empire",
+      "Roman Empire",
+      "Persian Empire",
+      "Mongol Empire"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Genghis Khan was the founder and ruler of the Mongol Empire."
+  },
+  {
+    "id": "history_hard_004",
+    "category": "History",
+    "difficulty": "hard",
+    "question": "What was the main cause of the French Revolution?",
+    "options": [
+      "Economic crisis and social inequality",
+      "Religious conflicts",
+      "Foreign invasions",
+      "Technological advancements"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The main cause of the French Revolution was economic crisis and social inequality."
+  },
+  {
+    "id": "history_hard_005",
+    "category": "History",
+    "difficulty": "hard",
+    "question": "Who was the leader of the Soviet Union during World War II?",
+    "options": [
+      "Vladimir Lenin",
+      "Joseph Stalin",
+      "Nikita Khrushchev",
+      "Leon Trotsky"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Joseph Stalin was the leader of the Soviet Union during World War II."
+  }
+]

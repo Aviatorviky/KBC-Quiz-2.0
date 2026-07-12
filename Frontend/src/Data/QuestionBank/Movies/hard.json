@@ -1,0 +1,72 @@
+[
+  {
+    "id": "movies_hard_001",
+    "category": "Movies",
+    "difficulty": "hard",
+    "question": "Which actor played the character of 'Tyler Durden' in the movie 'Fight Club'?",
+    "options": [
+      "Brad Pitt",
+      "Edward Norton",
+      "Helena Bonham Carter",
+      "Jared Leto"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Brad Pitt played the character of 'Tyler Durden' in the movie 'Fight Club'."
+  },
+  {
+    "id": "movies_hard_002",
+    "category": "Movies",
+    "difficulty": "hard",
+    "question": "Which movie won the Academy Award for Best Picture in 1994?",
+    "options": [
+      "Pulp Fiction",
+      "The Shawshank Redemption",
+      "Forrest Gump",
+      "Four Weddings and a Funeral"
+    ],
+    "correctAnswer": 2,
+    "explanation": "'Forrest Gump' won the Academy Award for Best Picture in 1994."
+  },
+  {
+    "id": "movies_hard_003",
+    "category": "Movies",
+    "difficulty": "hard",
+    "question": "Which movie features the character 'Darth Vader'?",
+    "options": [
+      "The Lord of the Rings",
+      "Harry Potter",
+      "The Matrix",
+      "Star Wars"
+    ],
+    "correctAnswer": 3,
+    "explanation": "'Darth Vader' is a character from the 'Star Wars' movie franchise."
+  },
+  {
+    "id": "movies_hard_004",
+    "category": "Movies",
+    "difficulty": "hard",
+    "question": "Who directed the movie 'Inception'?",
+    "options": [
+      "Christopher Nolan",
+      "Steven Spielberg",
+      "James Cameron",
+      "Quentin Tarantino"
+    ],
+    "correctAnswer": 0,
+    "explanation": "'Inception' was directed by Christopher Nolan."
+  },
+  {
+    "id": "movies_hard_005",
+    "category": "Movies",
+    "difficulty": "hard",
+    "question": "Which movie is known for the quote 'I'll be back'?",
+    "options": [
+      "Die Hard",
+      "The Terminator",
+      "Predator",
+      "Total Recall"
+    ],
+    "correctAnswer": 1,
+    "explanation": "'I'll be back' is a famous quote from the movie 'The Terminator', spoken by Arnold Schwarzenegger."
+  }
+]

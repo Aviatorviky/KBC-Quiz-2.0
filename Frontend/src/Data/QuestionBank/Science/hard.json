@@ -1,0 +1,76 @@
+[
+  {
+    "id": "science_hard_001",
+    "category": "Science",
+    "difficulty": "hard",
+    "question": "What is the powerhouse of the cell?",
+    "options": [
+      "Mitochondria",
+      "Nucleus",
+      "Ribosome",
+      "Endoplasmic Reticulum"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The mitochondria are known as the powerhouse of the cell because they generate most of the cell's supply of adenosine triphosphate (ATP), which is used as a source of chemical energy."
+  },
+
+  {
+    "id": "science_hard_002",
+    "category": "Science",
+    "difficulty": "hard",
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "KCl",
+      "CaCO3",
+      "H2O",
+      "NaCl"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The chemical formula for table salt is NaCl, which stands for sodium chloride."
+  },
+
+  {
+    "id": "science_hard_003",
+    "category": "Science",
+    "difficulty": "hard",
+    "question": "What is the speed of light in a vacuum?",
+    "options": [
+      "150,000,000 m/s",
+      "299,792,458 m/s",
+      "1,080,000,000 m/s",
+      "3,000,000 m/s"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The speed of light in a vacuum is approximately 299,792,458 meters per second (m/s)."
+  },
+
+  {
+    "id": "science_hard_004",
+    "category": "Science",
+    "difficulty": "hard",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Ag",
+      "Fe",
+      "Pb",
+      "Au"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The chemical symbol for gold is Au, which comes from the Latin word 'Aurum'."
+  },
+
+  {
+    "id": "science_hard_005",
+    "category": "Science",
+    "difficulty": "hard",
+    "question": "What is the process by which plants convert sunlight into chemical energy?",
+    "options": [
+      "Respiration",
+      "Transpiration",
+      "Photosynthesis",
+      "Fermentation"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Photosynthesis is the process by which plants convert sunlight into chemical energy, producing glucose and oxygen as byproducts."
+  }
+]

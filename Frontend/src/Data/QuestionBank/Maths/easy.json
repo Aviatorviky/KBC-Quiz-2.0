@@ -1,0 +1,72 @@
+[
+  {
+    "id": "maths_easy_001",
+    "category": "Maths",
+    "difficulty": "easy",
+    "question": "which one is not the prime number?",
+    "options": [
+      "881",
+      "527",
+      "947",
+      "647"
+    ],
+    "correctAnswer": 1,
+    "explanation": "527 is not a prime number (527 = 17 × 31), while the others are prime."
+  },
+  {
+    "id": "maths_easy_002",
+    "category": "Maths",
+    "difficulty": "easy",
+    "question": "What is the value of π (pi) to two decimal places?",
+    "options": [
+      "3.14",
+      "3.15",
+      "3.16",
+      "3.17"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The value of π (pi) to two decimal places is approximately 3.14."
+  },
+  {
+    "id": "maths_easy_003",
+    "category": "Maths",
+    "difficulty": "easy",
+    "question": "What is the square root of 144?",
+    "options": [
+      "10",
+      "11",
+      "12",
+      "13"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The square root of 144 is 12."
+  },
+  {
+    "id": "maths_easy_004",
+    "category": "Maths",
+    "difficulty": "easy",
+    "question": "What is the value of 7 × 8?",
+    "options": [
+      "54",
+      "56",
+      "58",
+      "60"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The value of 7 × 8 is 56."
+  },
+  {
+    "id": "maths_easy_005",
+    "category": "Maths",
+    "difficulty": "easy",
+    "question": "What is the sum of the angles in a triangle?",
+    "options": [
+      "90 degrees",
+      "180 degrees",
+      "270 degrees",
+      "360 degrees"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The sum of the angles in a triangle is always 180 degrees."
+  }
+]

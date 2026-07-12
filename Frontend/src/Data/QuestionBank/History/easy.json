@@ -1,0 +1,72 @@
+[
+  {
+    "id": "history_easy_001",
+    "category": "History",
+    "difficulty": "easy",
+    "question": "Who was the first Prime Minister of India?",
+    "options": [
+      "Mahatma Gandhi",
+      "Sardar Patel",
+      "Jawaharlal Nehru",
+      "Rajendra Prasad"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Jawaharlal Nehru became India's first Prime Minister in 1947."
+  },
+  {
+    "id": "history_easy_002",
+    "category": "History",
+    "difficulty": "easy",
+    "question": "In which year did India gain independence from British rule?",
+    "options": [
+      "1947",
+      "1950",
+      "1935",
+      "1942"
+    ],
+    "correctAnswer": 0,
+    "explanation": "India gained independence from British rule on August 15, 1947."
+  },
+  {
+    "id": "history_easy_003",
+    "category": "History",
+    "difficulty": "easy",
+    "question": "Who was the first President of the United States?",
+    "options": [
+      "Thomas Jefferson",
+      "George Washington",
+      "Abraham Lincoln",
+      "John Adams"
+    ],
+    "correctAnswer": 1,
+    "explanation": "George Washington served as the first President of the United States from 1789 to 1797."
+  },
+  {
+    "id": "history_easy_004",
+    "category": "History",
+    "difficulty": "easy",
+    "question": "Which ancient civilization built the pyramids?",
+    "options": [
+      "Romans",
+      "Greeks",
+      "Mesopotamians",
+      "Egyptians"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The ancient Egyptians built the pyramids as tombs for their pharaohs."
+  },
+  {
+    "id": "history_easy_005",
+    "category": "History",
+    "difficulty": "easy",
+    "question": "Who was the first Prime Minister of India?",
+    "options": [
+      "Jawaharlal Nehru",
+      "Mahatma Gandhi",
+      "Sardar Patel",
+      "Rajendra Prasad"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Jawaharlal Nehru became India's first Prime Minister in 1947."
+  }
+]

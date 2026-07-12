@@ -1,0 +1,72 @@
+[
+  {
+    "id": "history_expert_001",
+    "category": "History",
+    "difficulty": "expert",
+    "question": "Which ancient civilization is credited with the invention of the wheel?",
+    "options": [
+      "Mesopotamia",
+      "Ancient Egypt",
+      "Indus Valley Civilization",
+      "Ancient China"
+    ],
+    "correctAnswer": 0,
+    "explanation": "The ancient civilization credited with the invention of the wheel is Mesopotamia."
+    },
+  {
+    "id": "history_expert_002",
+    "category": "History",
+    "difficulty": "expert",
+    "question": "What was the name of the first satellite launched by India?",
+    "options": [
+      "Rohini",
+      "Aryabhata",
+      "Chandrayaan",
+      "INSAT"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The first satellite launched by India was Aryabhata in 1975."
+  },
+  {
+    "id": "history_expert_003",
+    "category": "History",
+    "difficulty": "expert",
+    "question": "Who was the first emperor of the Roman Empire?",
+    "options": [
+      "Julius Caesar",
+      "Nero",
+      "Augustus",
+      "Caligula"
+    ],
+    "correctAnswer": 2,
+    "explanation": "The first emperor of the Roman Empire was Augustus, who ruled from 27 BC to AD 14."
+  },
+  {
+    "id": "history_expert_004",
+    "category": "History",
+    "difficulty": "expert",
+    "question": "Which war was fought between the North and South regions of the United States from 1861 to 1865?",
+    "options": [
+      "World War I",
+      "American Civil War",
+      "War of 1812",
+      "Mexican-American War"
+    ],
+    "correctAnswer": 1,
+    "explanation": "The war fought between the North and South regions of the United States from 1861 to 1865 is known as the American Civil War."
+  },
+  {
+    "id": "history_expert_005",
+    "category": "History",
+    "difficulty": "expert",
+    "question": "Who was the leader of the Soviet Union during World War II?",
+    "options": [
+      "Vladimir Lenin",
+      "Nikita Khrushchev",
+      "Leon Trotsky",
+      "Joseph Stalin"
+    ],
+    "correctAnswer": 3,
+    "explanation": "The leader of the Soviet Union during World War II was Joseph Stalin."
+  }
+]

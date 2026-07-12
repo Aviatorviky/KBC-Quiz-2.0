@@ -1,0 +1,72 @@
+[
+  {
+    "id": "cyber_medium_001",
+    "category": "CyberSecurity",
+    "difficulty": "medium",
+    "question": "What is the main difference between symmetric and asymmetric encryption?",
+    "options": [
+      "Symmetric encryption uses the same key for encryption and decryption, while asymmetric encryption uses a pair of keys.",
+      "Symmetric encryption is faster than asymmetric encryption.",
+      "Asymmetric encryption is more secure than symmetric encryption.",
+      "Symmetric encryption is used for data at rest, while asymmetric encryption is used for data in transit."
+    ],
+    "correctAnswer": 0,
+    "explanation": "The main difference between symmetric and asymmetric encryption is that symmetric encryption uses the same key for both encryption and decryption, while asymmetric encryption uses a pair of keys (public and private)."
+  },
+  {
+    "id": "cyber_medium_002",
+    "category": "CyberSecurity",
+    "difficulty": "medium",
+    "question": "What is the purpose of a firewall in network security?",
+    "options": [
+      "To encrypt data transmitted over the network.",
+      "To monitor and control incoming and outgoing network traffic based on predetermined security rules.",
+      "To store sensitive information securely.",
+      "To detect and remove malware from the system."
+    ],
+    "correctAnswer": 1,
+    "explanation": "A firewall is a network security device that monitors and controls incoming and outgoing network traffic based on predetermined security rules."
+  },
+  {
+    "id": "cyber_medium_003",
+    "category": "CyberSecurity",
+    "difficulty": "medium",
+    "question": "Which of the following is a common method used to protect against phishing attacks?",
+    "options": [
+      "Using strong passwords.",
+      "Regularly updating software.",
+      "Educating users about phishing techniques.",
+      "All of the above."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Protecting against phishing attacks involves using strong passwords, regularly updating software, and educating users about phishing techniques."
+  },
+  {
+    "id": "cyber_medium_004",
+    "category": "CyberSecurity",
+    "difficulty": "medium",
+    "question": "What is the purpose of a VPN (Virtual Private Network)?",
+    "options": [
+      "To provide secure remote access to a network.",
+      "To block malware from entering the network.",
+      "To monitor network traffic for suspicious activity.",
+      "To encrypt email communications."
+    ],
+    "correctAnswer": 0,
+    "explanation": "A VPN provides secure remote access to a network by encrypting the connection between the user and the network."
+  },
+  {
+    "id": "cyber_medium_005",
+    "category": "CyberSecurity",
+    "difficulty": "medium",
+    "question": "Which of the following is a widely used symmetric encryption algorithm?",
+    "options": [
+      "RSA",
+      "AES",
+      "SHA-256",
+      "Diffie-Hellman"
+    ],
+    "correctAnswer": 1,
+    "explanation": "AES (Advanced Encryption Standard) is a widely used symmetric encryption algorithm."
+  }
+]

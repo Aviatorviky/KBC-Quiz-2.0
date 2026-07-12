@@ -2,7 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { Trophy, ChevronLeft, RefreshCcw } from "lucide-react";
-import { formatINR } from "../Data/questions";
+const formatINR = (value) =>
+  new Intl.NumberFormat("en-IN", {
+    style: "currency",
+    currency: "INR",
+    maximumFractionDigits: 0,
+  }).format(value);
 
 const API = process.env.REACT_APP_BACKEND_URL;
 
@@ -40,7 +45,7 @@ const Leaderboard = () => {
   }, []);
 
   return (
-    <div className="crt-scanlines min-h-screen w-full">
+    <div className="crt-scanlines animate-page min-h-screen w-full">
       <div className="max-w-5xl mx-auto px-6 md:px-10 py-10">
         <header className="flex items-center justify-between mb-10">
           <Link
