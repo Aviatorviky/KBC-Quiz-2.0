@@ -43,7 +43,9 @@ class GameEngine {
                 return this.advanceTier();
 
             case "AI_RANDOM_CATEGORY":
-                return this.aiRandomCategory();
+                return this.aiRandomCategory(
+                    action.payload?.category
+                );
 
             case "USE_LIFELINE":
                 return this.useLifeline(

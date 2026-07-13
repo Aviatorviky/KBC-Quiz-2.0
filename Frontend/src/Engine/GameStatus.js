@@ -4,6 +4,8 @@ export const GAME_STATUS = {
 
     CATEGORY_SELECTION: "category-selection",
 
+    AI_ASSIGNING: "ai-assigning",
+
     PLAYING: "playing",
 
     TIER_COMPLETED: "tier-completed",

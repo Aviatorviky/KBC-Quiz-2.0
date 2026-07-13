@@ -13,6 +13,8 @@ export const createGameState = () => ({
     //---------------------------------------
 
     mode: "classic",
+    
+    aiMode: false,
 
     //---------------------------------------
     // PROGRESSION
@@ -29,6 +31,8 @@ export const createGameState = () => ({
     //---------------------------------------
 
     currentCategory: null,
+
+    generatedCategory: null,
 
     usedCategories: [],
 

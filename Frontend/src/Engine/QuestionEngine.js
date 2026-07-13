@@ -79,12 +79,16 @@ class QuestionEngine {
     constructor(){
 
         this.usedQuestions = [];
+         // AI phase categories already assigned
+        this.aiUsedCategories = [];
 
     }
 
     reset(){
 
         this.usedQuestions = [];
+        this.aiUsedCategories = [];
+
 
     }
 
@@ -167,6 +171,70 @@ class QuestionEngine {
     return questions;
 
 }
+
+    // =====================================
+// AI CATEGORY METHODS
+// =====================================
+
+    getRandomCategory() {
+
+        const categories = [
+
+            "Sports",
+
+            "Movies",
+
+            "History",
+
+            "Science",
+
+            "Maths",
+
+            "CyberSecurity"
+
+        ];
+
+        // Categories not yet used in AI phase
+        let available = categories.filter(
+
+            category =>
+
+                !this.aiUsedCategories.includes(category)
+
+        );
+
+        // Safety reset (should rarely happen)
+        if (available.length === 0) {
+
+            this.aiUsedCategories = [];
+
+            available = categories;
+
+        }
+
+        const randomCategory =
+
+            available[
+
+                Math.floor(
+
+                    Math.random() * available.length
+
+                )
+
+            ];
+
+        this.aiUsedCategories.push(randomCategory);
+
+        return randomCategory;
+
+    }
+
+    resetAICategories() {
+
+        this.aiUsedCategories = [];
+
+    }
 
 }
 
