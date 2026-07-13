@@ -236,18 +236,21 @@ const EndScreen = ({
 
             {/* ICON */}
 
-            <div
-              className={`p-3 border ${c.border} mb-6`}
+            <button
+              type="button"
+              onClick={onRestart}
+              className={`p-3 border ${c.border} mb-6 hover:bg-white/5 transition-all`}
               style={{ borderRadius: 2 }}
+              title="Return to Home"
             >
-
+              
               <Icon
-                size={30}
+                size={28}
                 strokeWidth={1.5}
                 className={c.text}
               />
-
-            </div>
+            
+            </button>
 
             {/* STATUS */}
 

@@ -142,7 +142,7 @@ const Leaderboard = () => {
                     {formatINR(r.prize)}
                   </div>
                   <div className="col-span-2 hidden md:block text-white/60 tabular-nums">
-                    {r.questions_answered}/12
+                    {r.questions_answered}/36
                   </div>
                   <div className="col-span-4 md:col-span-1 text-right">
                     <span

@@ -145,11 +145,11 @@ const StartScreen = () => {
 
     </div>
 
-    <div className="relative z-10 max-w-7xl mx-auto px-8 py-10">
+    <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
 
         {/* HEADER */}
 
-        <header className="flex justify-between items-center mb-12">
+        <header className="flex flex-col sm:flex-row justify-between items-center gap-5 mb-8 sm:mb-12">
 
             <div className="flex items-center gap-3">
 
@@ -158,7 +158,7 @@ const StartScreen = () => {
                     size={24}
                 />
 
-                <span className="font-display text-xl tracking-[0.35em] text-cyan-neon glow-cyan">
+                <span className="font-display text-sm sm:text-lg lg:text-xl tracking-[0.18em] sm:tracking-[0.35em] text-cyan-neon glow-cyan text-center sm:text-left">
 
                     KAUN_BANEGA_CYBERPATI
 
@@ -174,7 +174,7 @@ const StartScreen = () => {
 
                 onClick={playClick}
 
-                className="border border-amber-neon px-5 py-2 hover:bg-amber-neon hover:text-black transition-all flex items-center gap-2 text-amber-neon"
+                className="w-full sm:w-auto border border-amber-neon px-4 sm:px-5 py-2 hover:bg-amber-neon hover:text-black transition-all flex items-center justify-center gap-2 text-amber-neon"
 
             >
 
@@ -206,19 +206,19 @@ const StartScreen = () => {
 
                 <h1 className="font-display font-black leading-none">
 
-                    <span className="block text-6xl lg:text-7xl text-white">
+                    <span className="block text-4xl sm:text-5xl lg:text-7xl text-white">
 
                         KAUN
 
                     </span>
 
-                    <span className="block text-6xl lg:text-7xl text-white">
+                    <span className="block text-4xl sm:text-5xl lg:text-7xl text-white">
 
                         BANEGA
 
                     </span>
 
-                    <span className="block text-7xl lg:text-8xl text-cyan-neon glow-cyan">
+                    <span className="block text-5xl sm:text-6xl lg:text-8xl text-cyan-neon glow-cyan">
 
                         CYBERPATI
 
@@ -226,7 +226,7 @@ const StartScreen = () => {
 
                 </h1>
 
-                <p className="mt-8 text-white/60 max-w-xl leading-8 text-lg">
+                <p className="mt-6 sm:mt-8 text-white/60 max-w-xl leading-7 sm:leading-8 text-base sm:text-lg">
 
                     Experience the legendary quiz show with a futuristic cyberpunk interface.
 
@@ -238,7 +238,7 @@ const StartScreen = () => {
 
                 {/* Boot Terminal */}
 
-                <div className="term-panel mt-10 p-6">
+                <div className="term-panel mt-8 sm:mt-10 p-4 sm:p-6">
 
                     <div className="flex items-center justify-between mb-4">
 
@@ -272,7 +272,7 @@ const StartScreen = () => {
 
                     </div>
 
-                    <div className="font-mono text-sm space-y-2 min-h-[220px]">
+                    <div className="font-mono text-sm space-y-2 min-h-[160px] sm:min-h-[220px]">
 
                         {BOOT_LINES.slice(0, line).map((txt, i)=>(
 
@@ -324,7 +324,7 @@ const StartScreen = () => {
 
             <div>
 
-                <div className="term-panel-cyan p-8">
+                <div className="term-panel-cyan p-5 sm:p-8">
 
                     <div className="flex items-center gap-3 mb-8">
 
@@ -366,13 +366,13 @@ const StartScreen = () => {
 
                     />
 
-                    <div className="grid grid-cols-2 gap-5 mt-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 mt-8">
 
                         <button
 
                             onClick={()=>setMode("classic")}
 
-                            className={`p-5 border transition-all ${
+                            className={`p-4 sm:p-5 transition-all ${
                                 mode==="classic"
                                 ?"border-cyan-neon bg-cyan-neon/10 shadow-cyan"
                                 :"border-white/10"
@@ -394,7 +394,7 @@ const StartScreen = () => {
 
                             onClick={()=>setMode("strategy")}
 
-                            className={`p-5 border transition-all ${
+                            className={`p-4 sm:p-5 transition-all ${
                                 mode==="strategy"
                                 ?"border-amber-neon bg-amber-neon/10 shadow-amber"
                                 :"border-white/10"
@@ -422,7 +422,7 @@ const StartScreen = () => {
 
                         disabled={!name.trim()}
 
-                        className="mt-10 w-full py-5 border border-amber-neon text-amber-neon hover:bg-amber-neon hover:text-black transition-all font-display text-lg tracking-[0.3em] disabled:opacity-30 flex justify-center items-center gap-3"
+                        className="mt-8 sm:mt-10 w-full py-4 sm:py-5 border border-amber-neon text-amber-neon hover:bg-amber-neon hover:text-black transition-all font-display text-base sm:text-lg tracking-[0.2em] sm:tracking-[0.3em] disabled:opacity-30 flex justify-center items-center gap-3"
 
                     >
 
@@ -438,7 +438,7 @@ const StartScreen = () => {
 
         </div>
 
-        <footer className="text-center mt-16 text-white/30 tracking-[0.35em] text-xs">
+        <footer className="text-center mt-10 sm:mt-16 text-white/30 tracking-[0.18em] sm:tracking-[0.35em] text-[10px] sm:text-xs px-4">
 
             CYBERPATI v2.0 • Developed by "Vikram Jha"
 

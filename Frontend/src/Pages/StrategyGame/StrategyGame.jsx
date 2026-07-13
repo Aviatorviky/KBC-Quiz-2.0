@@ -314,19 +314,6 @@ const StrategyGame = () => {
 
 };
 
-<EndScreen
-    outcome={
-        state.status === "game-over"
-            ? "wrong"
-            : state.status === "walked-away"
-            ? "walked_away"
-            : state.status
-    }
-    prize={state.currentPrize}
-    questionsAnswered={state.totalQuestionsAnswered}
-    playerName={state.playerName}
-    onRestart={() => navigate("/")}
-    onLeaderboard={() => navigate("/leaderboard")}
-/>
+
 
 export default StrategyGame;
