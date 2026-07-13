@@ -13,9 +13,9 @@ class GameEngine {
 
     }
 
-    // ============================
+    // ===========================================
     // PUBLIC API
-    // ============================
+    // ===========================================
 
     getState() {
 
@@ -37,103 +37,116 @@ class GameEngine {
                 return this.submitAnswer(action.payload);
 
             case "NEXT_QUESTION":
-                
                 return this.nextQuestion();
 
             case "NEXT_TIER":
                 return this.advanceTier();
 
-            case "WALK_AWAY":
-                return this.walkAway();
-            
-            case "USE_LIFELINE":
+            case "AI_RANDOM_CATEGORY":
+                return this.aiRandomCategory();
 
+            case "USE_LIFELINE":
                 return this.useLifeline(
-                  action.payload.type
+                    action.payload.type
                 );
 
             case "TIMEOUT":
                 return this.timeout();
+
+            case "WALK_AWAY":
+                return this.walkAway();
 
             case "RESET_GAME":
                 return this.resetGame();
 
             default:
 
-                console.warn("Unknown Action:", action.type);
+                console.warn(
+                    "Unknown Action:",
+                    action.type
+                );
+
+                return this.state;
 
         }
 
     }
 
-    // ============================
-    // GAME START
-    // ============================
+    // ===========================================
+    // START GAME
+    // ===========================================
 
     startGame(payload) {
 
-    this.state = createGameState();
+        this.state = createGameState();
 
-    this.state.playerName = payload.playerName;
+        this.state.playerName =
+            payload.playerName;
 
-    this.state.mode = payload.mode;
+        this.state.mode =
+            payload.mode;
 
-    QuestionEngine.reset();
+        QuestionEngine.reset();
 
-    // ==========================
-    // CLASSIC MODE
-    // ==========================
+        QuestionEngine.resetAICategories();
 
-    if (payload.mode === "classic") {
+        // ==========================
+        // CLASSIC MODE
+        // ==========================
 
-    const tier = getTier(1);
+        if (payload.mode === "classic") {
 
-    this.state.currentCategory = "Classic";
+            const tier = getTier(1);
 
-    this.state.currentQuestions =
-        QuestionEngine.getQuestions(
+            this.state.currentCategory =
+                "Classic";
 
-            "Classic",
+            this.state.currentQuestions =
+                QuestionEngine.getQuestions(
 
-            tier.difficulty,
+                    "Classic",
 
-            tier.questions
+                    tier.difficulty,
 
-        );
+                    tier.questions
 
-    this.state.currentQuestionIndex = 0;
+                );
 
-    this.state.currentQuestion =
-        this.state.currentQuestions[0];
+            this.state.currentQuestionIndex = 0;
 
-    this.state.status =
-        GAME_STATUS.PLAYING;
+            this.state.currentQuestion =
+                this.state.currentQuestions[0];
 
-}
-    // ==========================
-    // STRATEGY MODE
-    // ==========================
+            this.state.status =
+                GAME_STATUS.PLAYING;
 
-    else {
+            return this.state;
+
+        }
+
+        // ==========================
+        // STRATEGY MODE
+        // ==========================
 
         this.state.status =
             GAME_STATUS.CATEGORY_SELECTION;
 
+        return this.state;
+
     }
 
-    return this.state;
-
-}
-
-    // ============================
+    // ===========================================
     // CATEGORY
-    // ============================
+    // ===========================================
 
     selectCategory(payload) {
 
-        const tier = getTier(this.state.currentTier);
+        const tier = getTier(
+            this.state.currentTier
+        );
 
-        this.state.currentCategory = payload.category;
+        this.state.currentCategory =
+            payload.category;
 
         this.state.currentQuestions =
             QuestionEngine.getQuestions(
@@ -151,37 +164,276 @@ class GameEngine {
         this.state.currentQuestion =
             this.state.currentQuestions[0];
 
-        this.state.status = GAME_STATUS.PLAYING;
+        this.state.status =
+            GAME_STATUS.PLAYING;
 
         return this.state;
 
     }
 
-    // ============================
-    // PLACEHOLDERS
+        // ============================
+    // GAMEPLAY
     // ============================
 
     submitAnswer(payload) {
 
-    const question = this.state.currentQuestion;
+        const question = this.state.currentQuestion;
 
-    if (!question) {
+        if (!question) {
+
+            return this.state;
+
+        }
+
+        const selected = payload.answer;
+
+        this.state.revealedAnswer = selected;
+
+        // ==========================
+        // WRONG ANSWER
+        // ==========================
+
+        if (selected !== question.correctAnswer) {
+
+            this.state.wrongAnswers++;
+
+            this.state.currentPrize =
+                RewardEngine.getWrongAnswerPrize(
+                    this.state.currentTier
+                );
+
+            this.state.status =
+                GAME_STATUS.GAME_OVER;
+
+            return this.state;
+
+        }
+
+        // ==========================
+        // CORRECT ANSWER
+        // ==========================
+
+        this.state.correctAnswers++;
+
+        this.state.totalQuestionsAnswered++;
+
+        const tier =
+            getTier(this.state.currentTier);
+
+        this.state.currentPrize =
+            tier.reward;
+
+        this.state.guaranteedPrize =
+            RewardEngine.getGuaranteedPrize(
+                this.state.currentTier
+            );
+
+        // Tier completed?
+
+        if (
+
+            this.state.currentQuestionIndex >=
+            this.state.currentQuestions.length - 1
+
+        ) {
+
+            if (
+
+                isLastTier(
+                    this.state.currentTier
+                )
+
+            ) {
+
+                this.state.status =
+                    GAME_STATUS.WON;
+
+            }
+
+            else {
+
+                this.state.status =
+                    GAME_STATUS.TIER_COMPLETED;
+
+            }
+
+            return this.state;
+
+        }
+
+        return this.nextQuestion();
+
+    }
+
+    // ===========================================
+    // NEXT QUESTION
+    // ===========================================
+
+    nextQuestion() {
+
+        this.state.currentQuestionIndex++;
+
+        this.state.revealedAnswer = null;
+
+        this.state.currentQuestion =
+
+            this.state.currentQuestions[
+                this.state.currentQuestionIndex
+            ];
 
         return this.state;
 
     }
 
-    const selected = payload.answer;
+    // ===========================================
+    // NEXT TIER
+    // ===========================================
 
-    this.state.revealedAnswer = selected;
+    advanceTier() {
 
-    // ------------------------
-    // WRONG ANSWER
-    // ------------------------
+        this.state.currentTier++;
 
-    if (selected !== question.correctAnswer) {
+        this.state.currentQuestionIndex = 0;
 
-        this.state.wrongAnswers++;
+        this.state.revealedAnswer = null;
+
+        const tier =
+            getTier(this.state.currentTier);
+
+        // Finished game?
+
+        if (!tier) {
+
+            this.state.status =
+                GAME_STATUS.WON;
+
+            return this.state;
+
+        }
+
+        // =======================================
+        // CLASSIC MODE
+        // =======================================
+
+        if (this.state.mode === "classic") {
+
+            this.state.currentCategory =
+                "Classic";
+
+            this.state.currentQuestions =
+                QuestionEngine.getQuestions(
+
+                    "Classic",
+
+                    tier.difficulty,
+
+                    tier.questions
+
+                );
+
+            this.state.currentQuestion =
+                this.state.currentQuestions[0];
+
+            this.state.status =
+                GAME_STATUS.PLAYING;
+
+            return this.state;
+
+        }
+
+        // =======================================
+        // STRATEGY MODE
+        // =======================================
+
+        if (!this.state.aiMode) {
+
+            this.state.usedCategories =
+                CategoryEngine.lockCategory(
+
+                    this.state.currentCategory,
+
+                    this.state.usedCategories
+
+                );
+
+        }
+
+        this.state.currentCategory = null;
+
+        this.state.currentQuestions = [];
+
+        this.state.currentQuestion = null;
+
+        // =======================================
+        // ENTER AI MODE
+        // =======================================
+
+        if (
+
+            this.state.currentTier >= 7
+
+        ) {
+
+            this.state.aiMode = true;
+
+        }
+
+        // =======================================
+        // AI MODE
+        // =======================================
+
+        if (
+
+            this.state.aiMode
+
+        ) {
+
+            this.state.generatedCategory =
+
+                QuestionEngine.getRandomCategory();
+
+            this.state.status =
+
+                GAME_STATUS.AI_ASSIGNING;
+
+        }
+
+        else {
+
+            this.state.status =
+
+                GAME_STATUS.CATEGORY_SELECTION;
+
+        }
+
+        return this.state;
+
+    }
+
+
+        // ===========================================
+    // LIFELINES
+    // ===========================================
+
+    useLifeline(type) {
+
+        if (!this.state.lifelines[type]) {
+
+            return this.state;
+
+        }
+
+        this.state.lifelines[type] = false;
+
+        return this.state;
+
+    }
+
+    // ===========================================
+    // TIMEOUT
+    // ===========================================
+
+    timeout() {
 
         this.state.currentPrize =
             RewardEngine.getWrongAnswerPrize(
@@ -195,199 +447,85 @@ class GameEngine {
 
     }
 
-    // ------------------------
-    // CORRECT ANSWER
-    // ------------------------
-
-    this.state.correctAnswers++;
-
-    this.state.totalQuestionsAnswered++;
-
-    const tier = getTier(this.state.currentTier);
-
-    this.state.currentPrize = tier.reward;
-
-    this.state.guaranteedPrize =
-        RewardEngine.getGuaranteedPrize(
-            this.state.currentTier
-        );
-
-    // Finished this tier?
-
-    if (
-        this.state.currentQuestionIndex >=
-        this.state.currentQuestions.length - 1
-    ) {
-
-        // Last Tier?
-
-        if (isLastTier(this.state.currentTier)) {
-
-            this.state.status = GAME_STATUS.WON;
-
-            return this.state;
-
-        }
-
-        this.state.status = GAME_STATUS.TIER_COMPLETED;
-
-        return this.state;
-
-    }
-
-    // More questions remaining
-
-    this.nextQuestion();
-
-    return this.state;
-
-}
-
-    nextQuestion() {
-
-    this.state.currentQuestionIndex++;
-
-    if (
-        this.state.currentQuestionIndex <
-        this.state.currentQuestions.length
-    ) {
-
-        this.state.currentQuestion =
-            this.state.currentQuestions[
-                this.state.currentQuestionIndex
-            ];
-
-        this.state.revealedAnswer = null;
-
-    }
-
-    return this.state;
-
-}
-
-    advanceTier() {
-
-    this.state.currentTier++;
-
-    this.state.revealedAnswer = null;
-
-    this.state.currentQuestionIndex = 0;
-
-    const tier = getTier(this.state.currentTier);
-
-    // No more tiers after the last one
-    if (!tier) {
-
-        this.state.status = GAME_STATUS.WON;
-
-        return this.state;
-
-    }
-
-    // ==========================
-    // STRATEGY MODE
-    // ==========================
-
-    if (this.state.mode === "strategy") {
-
-        this.state.usedCategories =
-            CategoryEngine.lockCategory(
-                this.state.currentCategory,
-                this.state.usedCategories
-            );
-
-        this.state.currentCategory = null;
-        this.state.currentQuestions = [];
-        this.state.currentQuestion = null;
-
-        this.state.status =
-            GAME_STATUS.CATEGORY_SELECTION;
-
-        return this.state;
-
-    }
-
-    // ==========================
-    // CLASSIC MODE
-    // ==========================
-
-    this.state.currentCategory = "Classic";
-
-    this.state.currentQuestions =
-        QuestionEngine.getQuestions(
-            "Classic",
-            tier.difficulty,
-            tier.questions
-        );
-
-    this.state.currentQuestion =
-        this.state.currentQuestions[0];
-
-    this.state.status =
-        GAME_STATUS.PLAYING;
-
-    return this.state;
-
-}
-
-
-    useLifeline(type) {
-
-    if (!this.state.lifelines[type]) {
-
-        return this.state;
-
-    }
-
-    this.state.lifelines[type] = false;
-
-    return this.state;
-
-}
-
-    timeout() {
-
-    this.state.currentPrize =
-        RewardEngine.getWrongAnswerPrize(
-            this.state.currentTier
-        );
-
-    this.state.status =
-        GAME_STATUS.GAME_OVER;
-
-    return this.state;
-
-}
+    // ===========================================
+    // WALK AWAY
+    // ===========================================
 
     walkAway() {
 
-    // Player already cleared the current tier,
-    // so keep the current reward.
+        this.state.currentPrize =
+            RewardEngine.getWalkAwayPrize(
+                this.state.currentTier
+            );
 
-    this.state.currentPrize =
-        getTier(this.state.currentTier).reward;
+        this.state.guaranteedPrize =
+            RewardEngine.getGuaranteedPrize(
+                this.state.currentTier
+            );
 
-    this.state.guaranteedPrize =
-        RewardEngine.getGuaranteedPrize(
-            this.state.currentTier
-        );
+        this.state.status =
+            GAME_STATUS.WALKED_AWAY;
 
-    this.state.status =
-        GAME_STATUS.WALKED_AWAY;
+        return this.state;
 
-    return this.state;
+    }
 
-}
+    // ===========================================
+    // AI RANDOM CATEGORY
+    // ===========================================
+
+    aiRandomCategory() {
+
+        const tier =
+            getTier(this.state.currentTier);
+
+        const category =
+            this.state.generatedCategory;
+
+        this.state.currentCategory =
+            category;
+
+        this.state.currentQuestions =
+            QuestionEngine.getQuestions(
+
+                category,
+
+                tier.difficulty,
+
+                tier.questions
+
+            );
+
+        this.state.currentQuestionIndex = 0;
+
+        this.state.currentQuestion =
+            this.state.currentQuestions[0];
+
+        this.state.revealedAnswer = null;
+
+        this.state.status =
+            GAME_STATUS.PLAYING;
+
+        return this.state;
+
+    }
+
+    // ===========================================
+    // RESET GAME
+    // ===========================================
 
     resetGame() {
 
-    this.state = createGameState();
+        this.state =
+            createGameState();
 
-    QuestionEngine.reset();
+        QuestionEngine.reset();
 
-    return this.state;
+        QuestionEngine.resetAICategories();
 
-}
+        return this.state;
+
+    }
 
 }
 
