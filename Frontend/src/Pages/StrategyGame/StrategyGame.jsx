@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import GameEngine from "../../Engine/GameEngine";
+import { GAME_STATUS } from "../../Engine/GameStatus";
 
 import CategorySelection from "./components/CategorySelection";
+import AIDefenseScreen from "./components/AIDefenseScreen";
 
 import GameHeader from "../components/Game/GameHeader";
 import GameBoard from "../components/Game/GameBoard";
@@ -21,9 +23,15 @@ const StrategyGame = () => {
         GameEngine.getState()
     );
 
-    const [showReward, setShowReward] = useState(false);
+    const [showReward, setShowReward] =
+        useState(false);
 
-    const [loadingNextTier, setLoadingNextTier] = useState(false);
+    const [loadingNextTier, setLoadingNextTier] =
+        useState(false);
+
+    // ===========================================
+    // GAME START
+    // ===========================================
 
     useEffect(() => {
 
@@ -60,9 +68,14 @@ const StrategyGame = () => {
 
     }, [navigate]);
 
+    // ===========================================
+    // REFRESH GAME STATE
+    // ===========================================
+
     const refresh = () => {
 
-        const updated = GameEngine.getState();
+        const updated =
+            GameEngine.getState();
 
         setState({
 
@@ -70,7 +83,12 @@ const StrategyGame = () => {
 
         });
 
-        if (updated.status === "tier-completed") {
+        if (
+
+            updated.status ===
+            "tier-completed"
+
+        ) {
 
             setShowReward(true);
 
@@ -78,21 +96,47 @@ const StrategyGame = () => {
 
     };
 
+    // ===========================================
+    // CONTINUE
+    // ===========================================
+
     const continueMission = () => {
 
-    setShowReward(false);
+        setShowReward(false);
 
-    setLoadingNextTier(true);
+        setLoadingNextTier(true);
 
-    setTimeout(() => {
+        setTimeout(() => {
+
+            GameEngine.dispatch({
+
+                type: "NEXT_TIER"
+
+            });
+
+            setLoadingNextTier(false);
+
+            setState({
+
+                ...GameEngine.getState()
+
+            });
+
+        }, 800);
+
+    };
+
+    // ===========================================
+    // AI FINISHED
+    // ===========================================
+
+    const aiDefenseComplete = () => {
 
         GameEngine.dispatch({
 
-            type: "NEXT_TIER"
+            type: "AI_RANDOM_CATEGORY"
 
         });
-
-        setLoadingNextTier(false);
 
         setState({
 
@@ -100,19 +144,31 @@ const StrategyGame = () => {
 
         });
 
-    }, 800);
+    };
 
-};
+    // ===========================================
+    // WALK AWAY
+    // ===========================================
 
     const walkAway = () => {
 
         const confirmWalk = window.confirm(
 
-            `Walk away with ${new Intl.NumberFormat("en-IN", {
-                style: "currency",
-                currency: "INR",
-                maximumFractionDigits: 0,
-            }).format(state.currentPrize)} ?`
+            `Walk away with ${new Intl.NumberFormat(
+
+                "en-IN",
+
+                {
+
+                    style: "currency",
+
+                    currency: "INR",
+
+                    maximumFractionDigits: 0,
+
+                }
+
+            ).format(state.currentPrize)} ?`
 
         );
 
@@ -132,51 +188,55 @@ const StrategyGame = () => {
 
     };
 
+    // ===========================================
+    // LOADING
+    // ===========================================
+
     if (loadingNextTier) {
 
-    return (
+        return (
 
-        <div className="crt-scanlines animate-page min-h-screen flex items-center justify-center">
+            <div className="crt-scanlines animate-page min-h-screen flex items-center justify-center">
 
-            <div className="term-panel max-w-lg w-full p-10 text-center">
+                <div className="term-panel max-w-lg w-full p-10 text-center">
 
-                <h2 className="font-display text-3xl text-cyan-neon mb-6">
+                    <h2 className="font-display text-3xl text-cyan-neon mb-6">
 
-                    LOADING NEXT MISSION
+                        LOADING NEXT MISSION
 
-                </h2>
+                    </h2>
 
-                <div className="h-3 bg-white/10 rounded overflow-hidden">
+                    <div className="h-3 bg-white/10 rounded overflow-hidden">
 
-                    <div className="h-full bg-cyan-neon animate-pulse w-full"/>
+                        <div className="h-full bg-cyan-neon animate-pulse w-full"/>
+
+                    </div>
+
+                    <p className="mt-6 text-white/60">
+
+                        Synchronizing Question Database...
+
+                    </p>
 
                 </div>
 
-                <p className="mt-6 text-white/60">
-
-                    Synchronizing Question Database...
-
-                </p>
-
             </div>
 
-        </div>
+        );
 
-    );
+    }
 
-}
-
-    // ==========================
+        // ===========================================
     // END GAME
-    // ==========================
+    // ===========================================
 
     if (
 
-        state.status === "won" ||
+        state.status === GAME_STATUS.WON ||
 
-        state.status === "game-over" ||
+        state.status === GAME_STATUS.GAME_OVER ||
 
-        state.status === "walked-away"
+        state.status === GAME_STATUS.WALKED_AWAY
 
     ) {
 
@@ -185,22 +245,26 @@ const StrategyGame = () => {
             <EndScreen
 
                 outcome={
-                    state.status === "game-over"
-                      ? "wrong"
-                      : state.status === "walked-away"
-                      ? "walked_away"
-                      : state.status
+                    state.status === GAME_STATUS.GAME_OVER
+                        ? "wrong"
+                        : state.status === GAME_STATUS.WALKED_AWAY
+                        ? "walked_away"
+                        : "won"
                 }
 
                 prize={state.currentPrize}
 
-                questionsAnswered={state.totalQuestionsAnswered}
+                questionsAnswered={
+                    state.totalQuestionsAnswered
+                }
 
                 playerName={state.playerName}
 
                 onRestart={() => navigate("/")}
 
-                onLeaderboard={() => navigate("/leaderboard")}
+                onLeaderboard={() =>
+                    navigate("/leaderboard")
+                }
 
             />
 
@@ -208,13 +272,42 @@ const StrategyGame = () => {
 
     }
 
-    // ==========================
-    // CATEGORY SELECTION
-    // ==========================
+    // ===========================================
+    // AI DEFENSE
+    // ===========================================
 
     if (
 
-        state.status === "category-selection"
+        state.status === GAME_STATUS.AI_ASSIGNING
+
+    ) {
+
+        return (
+
+            <AIDefenseScreen
+
+                category={
+                    state.generatedCategory
+                }
+
+                onComplete={
+                    aiDefenseComplete
+                }
+
+            />
+
+        );
+
+    }
+
+    // ===========================================
+    // CATEGORY SELECTION
+    // ===========================================
+
+    if (
+
+        state.status ===
+        GAME_STATUS.CATEGORY_SELECTION
 
     ) {
 
@@ -232,9 +325,9 @@ const StrategyGame = () => {
 
     }
 
-    // ==========================
+        // ===========================================
     // MAIN GAME
-    // ==========================
+    // ===========================================
 
     return (
 
@@ -282,21 +375,21 @@ const StrategyGame = () => {
 
                 onWalkAway={() => {
 
-                setShowReward(false);
+                    setShowReward(false);
 
-                GameEngine.dispatch({
-                
-                    type: "WALK_AWAY"
-                
-                });
-            
-                setState({
-                
-                    ...GameEngine.getState()
-                
-                });
-            
-            }}
+                    GameEngine.dispatch({
+
+                        type: "WALK_AWAY"
+
+                    });
+
+                    setState({
+
+                        ...GameEngine.getState()
+
+                    });
+
+                }}
 
             />
 
@@ -313,7 +406,5 @@ const StrategyGame = () => {
     );
 
 };
-
-
 
 export default StrategyGame;
