@@ -453,22 +453,20 @@ class GameEngine {
 
     walkAway() {
 
-        this.state.currentPrize =
-            RewardEngine.getWalkAwayPrize(
-                this.state.currentTier
-            );
+    // Keep whatever prize the player has already earned.
+    // currentPrize is already updated after every correct answer.
 
-        this.state.guaranteedPrize =
-            RewardEngine.getGuaranteedPrize(
-                this.state.currentTier
-            );
+    this.state.guaranteedPrize =
+        RewardEngine.getGuaranteedPrize(
+            this.state.currentTier
+        );
 
-        this.state.status =
-            GAME_STATUS.WALKED_AWAY;
+    this.state.status =
+        GAME_STATUS.WALKED_AWAY;
 
-        return this.state;
+    return this.state;
 
-    }
+}
 
     // ===========================================
     // AI RANDOM CATEGORY

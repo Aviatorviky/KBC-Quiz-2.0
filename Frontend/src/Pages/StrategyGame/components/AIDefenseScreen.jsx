@@ -106,19 +106,19 @@ const AIDefenseScreen = ({ category, onComplete }) => {
                 <div className="mt-12">
 
                     <div className="flex justify-between text-[10px] tracking-[0.35em] text-white/40 mb-2">
-                                
+
                         <span>AI ANALYSIS</span>
-                                
+
                         <span>{Math.min(step * 20, 100)}%</span>
-                                
+
                     </div>
-                                
+
                     <div className="relative h-2 rounded overflow-hidden bg-white/10">
-                                
+
                         <div
-                
+
                             className="absolute left-0 top-0 h-full bg-danger transition-all duration-700"
-                                
+
                             style={{
                             
                                 width: `${Math.min(step * 20, 100)}%`
@@ -126,7 +126,7 @@ const AIDefenseScreen = ({ category, onComplete }) => {
                             }}
                         
                         />
-                
+
                     </div>
                         
                 </div>
